@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 class Hamster extends Component {
+
+  handleHamsterVoteClick = (event) => {
+    event.preventDefault();
+    this.props.handleClickVote(this.props.id);
+  }
+
   render() {
     return (
       <div className='item'>
@@ -10,7 +16,7 @@ class Hamster extends Component {
 
         <div className='middle aligned content'>
           <div className='header'>
-            <a href='/'>
+            <a href='/' onClick={this.handleHamsterVoteClick}>
               <i className='large caret up icon' />
             </a>
             {this.props.votes}
