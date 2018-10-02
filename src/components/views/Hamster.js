@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 
 class Hamster extends Component {
-  
   render() {
-
-  
-
     return (
       <div className='item'>
         <div className='image'>
@@ -17,7 +13,7 @@ class Hamster extends Component {
             <a href='/'>
               <i className='large caret up icon' />
             </a>
-            50
+            {this.props.votes}
           </div>
 
           <div className='description'>

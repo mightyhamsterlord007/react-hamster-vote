@@ -14,6 +14,7 @@ class HamsterList extends Component {
         title: 'Hamster lord from East',
         description: 'These nuts',
         url: '#',
+        votes: generateVoteCount(),
         avatarUrl: 'images/users/kobe.jpeg',
         hamsterImageUrl: 'images/hamsters/hamster-1.jpeg'
       },
@@ -22,6 +23,7 @@ class HamsterList extends Component {
         title: 'Hamster lord from South',
         description: 'These nuts',
         url: '#',
+        votes: generateVoteCount(),
         avatarUrl: 'images/users/michael.jpeg',
         hamsterImageUrl: 'images/hamsters/hamster-2.jpeg'
       },
@@ -30,6 +32,7 @@ class HamsterList extends Component {
         title: 'Hamster lord from West',
         description: 'These nuts',
         url: '#',
+        votes: generateVoteCount(),
         avatarUrl: 'images/users/kevin.jpeg',
         hamsterImageUrl: 'images/hamsters/hamster-3.jpeg'
       },
@@ -37,6 +40,7 @@ class HamsterList extends Component {
         id: 4,
         title: 'Hamster lord from North',
         description: 'These nuts',
+        votes: generateVoteCount(),
         url: '#',
         avatarUrl: 'images/users/russell.jpeg',
         hamsterImageUrl: 'images/hamsters/hamster-4.jpeg'
@@ -50,6 +54,7 @@ class HamsterList extends Component {
             id={hamster.id}
             title={hamster.title}
             description={hamster.description}
+            votes={hamster.votes}
             url={hamster.url}
             avatarUrl={hamster.avatarUrl}
             hamsterImageUrl={hamster.hamsterImageUrl}
