@@ -45,17 +45,20 @@ class HamsterList extends Component {
 
     let showHamstersInfo = hamstersArray.map((hamster) => {
       return (
-          <div key={hamster.id}>
-              <img alt='' src={hamster.hamsterImageUrl} />
-              <h1>{hamster.title}</h1>
-              <span>{hamster.description}</span>
-              <img alt='' src={hamster.avatarUrl} />
-          </div>
+          <Hamster 
+            key={`hamster-${hamster.id}`}
+            id={hamster.id}
+            title={hamster.title}
+            description={hamster.description}
+            url={hamster.url}
+            avatarUrl={hamster.avatarUrl}
+            hamsterImageUrl={hamster.hamsterImageUrl}
+          />
       )
     })
 
     return (
-     <div>
+     <div className='ui unstackable items'>
       {showHamstersInfo}
      </div>
     );
