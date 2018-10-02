@@ -1,5 +1,5 @@
-import Product from './Product';
+import Hamster from './Hamster';
 
 export {
-  Product
+  Hamster
 }

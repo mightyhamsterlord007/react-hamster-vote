@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Product } from '../views';
+import { Hamster } from '../views';
 
 import { generateVoteCount } from '../utils/randomNumGen';
 
@@ -12,7 +12,7 @@ class HamsterList extends Component {
  
     return (
      <div>
-      
+      <Hamster />
      </div>
     );
   }

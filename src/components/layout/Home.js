@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { ProductList } from '../containers';
+import { HamsterList } from '../containers';
 
 export default class Home extends Component {
   render() {
     return (
-      <ProductList />
+      <HamsterList />
     )
   }
 }

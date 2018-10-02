@@ -1,5 +1,5 @@
-import ProductList from './ProductList';
+import HamsterList from './HamsterList';
 
 export { 
-  ProductList
+  HamsterList
 }

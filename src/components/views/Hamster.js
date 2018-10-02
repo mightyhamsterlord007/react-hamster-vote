@@ -12,4 +12,4 @@ class Hamster extends Component {
   }
 }
 
-export default Product;
+export default Hamster;
