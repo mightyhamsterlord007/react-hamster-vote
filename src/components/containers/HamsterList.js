@@ -75,7 +75,11 @@ class HamsterList extends Component {
 
   render() {
 
-    let showHamstersInfo = this.state.hamsters.map((hamster) => {
+    const sortedHamsters = this.state.hamsters.sort((a, b) => {
+     return  b.votes - a.votes;
+    });
+
+    let showHamstersInfo = sortedHamsters.map((hamster) => {
       return (
           <Hamster 
             key={`hamster-${hamster.id}`}
