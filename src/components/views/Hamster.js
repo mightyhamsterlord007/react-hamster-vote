@@ -4,6 +4,7 @@ class Hamster extends Component {
 
   handleHamsterVoteClick = (event) => {
     event.preventDefault();
+    console.log(this.props)
     this.props.handleClickVote(this.props.id);
   }
 
