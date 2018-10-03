@@ -3,6 +3,8 @@ import { Hamster } from '../views';
 
 import { generateVoteCount } from '../utils/randomNumGen';
 
+import axios from 'axios';
+
 const hamstersArray = [
   {
     id: 1,
@@ -50,9 +52,23 @@ class HamsterList extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      hamsters: hamstersArray
-    })
+    console.log(this)
+    axios.get('http://localhost:3001/hamsters/getallhamsters')
+      .then( (response) => {
+        console.log(this)
+        console.log(response.data.payload);
+        let hamsters = response.data.payload;
+
+        this.setState({
+          hamsters
+        })
+
+      })
+      .catch( (error) => {
+        console.log(error);
+      });
+
+    
   }
 
   handleClickVote = (id) => {
