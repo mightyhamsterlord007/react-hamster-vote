@@ -49,11 +49,8 @@ class HamsterList extends Component {
   }
 
   componentDidMount() {
-    console.log(this)
     axios.get('http://localhost:3001/hamsters/getallhamsters')
       .then( (response) => {
-        console.log(this)
-        console.log(response.data.payload);
         let hamsters = response.data.payload;
 
         this.setState({
@@ -69,20 +66,31 @@ class HamsterList extends Component {
   }
 
   handleClickVote = (id) => {
-    
-     const nextVoteCount = this.state.hamsters.map(hamster => {
-      if (hamster._id === id) {
-        return Object.assign({}, hamster, {
-          votes: hamster.votes + 1
-        })
-      } else {
-        return hamster
-      }
-     });
 
-     this.setState({
-       hamsters: nextVoteCount
-     });
+  
+    axios.put('http://localhost:3001/hamsters/upvote?_method=PUT', {id: id})
+      .then(hamster => {
+
+        const nextVoteCount = this.state.hamsters.map(hamster => {
+          if (hamster._id === id) {
+            return Object.assign({}, hamster, {
+              votes: hamster.votes + 1
+            })
+          } else {
+            return hamster
+          }
+         });
+    
+         this.setState({
+           hamsters: nextVoteCount
+         });
+      })
+      .catch(err => {
+        console.log(err);
+      })
+     
+
+
 
   }
 
