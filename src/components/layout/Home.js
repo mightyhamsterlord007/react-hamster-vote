@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { HamsterList } from '../containers';
+import { HamsterList, User } from '../containers';
 
 export default class Home extends Component {
   render() {
     return (
-      <HamsterList />
+      <React.Fragment>
+        <User />
+        <HamsterList />
+      </React.Fragment>
     )
   }
 }

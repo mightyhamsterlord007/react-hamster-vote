@@ -118,6 +118,7 @@ class HamsterList extends Component {
 
     return (
      <div className='ui unstackable items'>
+           <h1 className="ui dividing centered header">Favorite Hamsters</h1>
       {showHamstersInfo}
      </div>
     );
